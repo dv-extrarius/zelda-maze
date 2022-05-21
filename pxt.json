@@ -1,0 +1,50 @@
+{
+    "name": "Zelda JS Maze",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.2"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "custom.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v1.8.23",
+        "tag": "v1.8.23",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/9c2cb5aa7c70a9b9cbfa1b3520ca036d82ba8483",
+        "target": "1.8.23",
+        "pxt": "7.4.27",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj",
+    "palette": [
+        "#353535",
+        "#FF93C4",
+        "#8E2EC4",
+        "#5C406C",
+        "#FF1030",
+        "#50C878",
+        "#000000",
+        "#CCCCCC",
+        "#646964",
+        "#D77355",
+        "#508CD7",
+        "#64B964",
+        "#E6C86E",
+        "#DCF5FF",
+        "#D24040",
+        "#FFFFFF"
+    ]
+}
