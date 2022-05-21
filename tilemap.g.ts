@@ -3,15 +3,7 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const transparency16 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile1 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
-    export const tile3 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
-    export const tile5 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
     export const tile4 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
-    export const tile6 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile7 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
@@ -21,9 +13,17 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile2 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile9 = image.ofBuffer(hex``);
+    export const tile1 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile3 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile5 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile6 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile11 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile9 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile13 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
@@ -51,16 +51,8 @@ namespace myTiles {
     helpers._registerFactory("tile", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "transparency16":return transparency16;
-            case "DungeonUpperLeft":
-            case "tile1":return tile1;
-            case "DungeonUpper":
-            case "tile3":return tile3;
-            case "DungeonUpperRight":
-            case "tile5":return tile5;
             case "DungeonLeft":
             case "tile4":return tile4;
-            case "DungeonRight":
-            case "tile6":return tile6;
             case "DungeonBottomLeft":
             case "tile7":return tile7;
             case "DungeonBottom":
@@ -69,11 +61,19 @@ namespace myTiles {
             case "tile10":return tile10;
             case "DungeonBlock":
             case "tile2":return tile2;
-            case "DungeonDoorLeft1":
-            case "tile9":return tile9;
+            case "DungeonTopLeft":
+            case "tile1":return tile1;
+            case "DungeonTop":
+            case "tile3":return tile3;
+            case "DungeonTopRight":
+            case "tile5":return tile5;
+            case "DungeonRight":
+            case "tile6":return tile6;
             case "DungeonDoorRight":
             case "tile11":return tile11;
-            case "DungeonDoorTop0":
+            case "DungeonDoorLeft":
+            case "tile9":return tile9;
+            case "DungeonDoorTop":
             case "tile13":return tile13;
             case "DungeonDoorBottom":
             case "tile15":return tile15;

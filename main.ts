@@ -1,7 +1,8 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     //console.logValue("room", room_id)
     //console.log(console.inspect(maze.walls, 1024))
-    console.logValue("y", zelda.y)
+    //console.logValue("y", zelda.y)
+    custom.RandomizeDungeonColors();
 })
 let zelda_alignment = 0
 let pressed_leftright = false
@@ -12,36 +13,27 @@ let fade_end: number = null
 let fade_x: number = 0
 let fade_y: number = 0
 let zelda = sprites.create(img`
-    . . . . . f f 4 4 f f . . . . .
-    . . . . f 5 4 5 5 4 5 f . . . .
-    . . . f e 4 5 5 5 5 4 e f . . .
-    . . f b 3 e 4 4 4 4 e 3 b f . .
-    . . f 3 3 3 3 3 3 3 3 3 3 f . .
-    . f 3 3 e b 3 e e 3 b e 3 3 f .
-    . f 3 3 f f e e e e f f 3 3 f .
-    . f b b f b f e e f b f b b f .
-    . f b b e 1 f 4 4 f 1 e b b f .
-    f f b b f 4 4 4 4 4 4 f b b f f
-    f b b f f f e e e e f f f b b f
-    . f e e f b d d d d b f e e f .
-    . . e 4 c d d d d d d c 4 e . .
-    . . e f b d b d b d b b f e . .
-    . . . f f 1 d 1 d 1 d f f . . .
-    . . . . . f f b b f f . . . . .
+    . . . . . . 5 . 5 . . . . . . .
+    . . . . . f 5 5 5 f f . . . . .
+    . . . . f 1 5 2 5 1 6 f . . . .
+    . . . f 1 6 6 6 6 6 1 6 f . . .
+    . . . f 6 6 f f f f 6 1 f . . .
+    . . . f 6 f f d d f f 6 f . . .
+    . . f 6 f d f d d f d f 6 f . .
+    . . f 6 f d 3 d d 3 d f 6 f . .
+    . . f 6 6 f d d d d f 6 6 f . .
+    . f 6 6 f 3 f f f f 3 f 6 6 f .
+    . . f f d 3 5 3 3 5 3 d f f . .
+    . . f d d f 3 5 5 3 f d d f . .
+    . . . f f 3 3 3 3 3 3 f f . . .
+    . . . f 3 3 5 3 3 5 3 3 f . . .
+    . . . f f f f f f f f f f . . .
+    . . . . . f f . . f f . . . . .
 `, SpriteKind.Player)
-let room_id_image = sprites.create(img`
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-`, SpriteKind.Player)
+let emeralds_hud = sprites.create(assets.image`Emerald_Hud`, SpriteKind.Player)
 
 zelda.setPosition(screen.width / 2, screen.height / 2)
-room_id_image.setPosition(room_id_image.image.width / 2, 8 + (room_id_image.image.height / 2));
+emeralds_hud.setPosition(screen.width - emeralds_hud.width / 2, 8 + (emeralds_hud.height / 2));
 controller.moveSprite(zelda, 50, 50)
 let maze = custom.GenerateMaze(8, 8)
 room_id = randint(0, maze.width * maze.height - 1)
@@ -70,8 +62,7 @@ game.onUpdate(function () {
             fade_x = zelda.x
             fade_y = 28
         }
-        if(fade_end != null)
-        {
+        if (fade_end != null) {
             color.FadeToBlack.startScreenEffect(100);
             controller.moveSprite(zelda, 0, 0)
         }
@@ -85,9 +76,8 @@ game.onUpdate(function () {
         fade_end = null;
         controller.moveSprite(zelda, 50, 50)
     }
-    room_id_image.image.fill(0)
-    room_id_image.image.print((room_id > 9 ? "" + room_id : "0" + room_id), 0, 0, 1, image.font8);
-    console.log(room_id_image.image.width)
+    emeralds_hud.image.fillRect(10, 0, emeralds_hud.width - 10, emeralds_hud.height, 0);
+    emeralds_hud.image.print(custom.FormatInteger(room_id, 5), 11, 0, 5, image.font8);
 })
 game.onUpdateInterval(100, function () {
     // Nudge Link to align on the grid when moving in a cardinal direction

@@ -12,7 +12,9 @@
         "assets.json",
         "custom.ts",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -37,14 +39,14 @@
         "#FF1030",
         "#50C878",
         "#000000",
-        "#CCCCCC",
-        "#646964",
-        "#D77355",
-        "#508CD7",
-        "#64B964",
-        "#E6C86E",
-        "#DCF5FF",
+        "#AAAAAA",
+        "#646464",
         "#D24040",
+        "#00A0C8",
+        "#10C840",
+        "#FAC800",
+        "#DCF5FF",
+        "#A0694B",
         "#FFFFFF"
     ]
 }

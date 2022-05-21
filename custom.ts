@@ -177,23 +177,46 @@ namespace custom {
         
         if ((maze.walls[room] & WallType.Left) != 0) {
             loc = tiles.getTileLocation(0, 4);
-            tiles.setTileAt(loc, sprites.dungeon.purpleOuterWest0);
+            tiles.setTileAt(loc, assets.tile`DungeonLeft`);
             tiles.setWallAt(loc, true);
         }
         if ((maze.walls[room] & WallType.Right) != 0) {
             loc = tiles.getTileLocation(9, 4);
-            tiles.setTileAt(loc, sprites.dungeon.purpleOuterEast0);
+            tiles.setTileAt(loc, assets.tile`DungeonRight`);
             tiles.setWallAt(loc, true);
         }
         if ((maze.walls[room] & WallType.Up) != 0) {
             loc = tiles.getTileLocation(5, 1);
-            tiles.setTileAt(loc, sprites.dungeon.purpleOuterNorth0);
+            tiles.setTileAt(loc, assets.tile`DungeonTop`);
             tiles.setWallAt(loc, true);
         }
         if ((maze.walls[room] & WallType.Down) != 0) {
             loc = tiles.getTileLocation(5, 7);
-            tiles.setTileAt(loc, sprites.dungeon.purpleOuterSouth1);
+            tiles.setTileAt(loc, assets.tile`DungeonBottom`);
             tiles.setWallAt(loc, true);
         }
+    }
+    /**
+     * Randomize Dungeon Colors
+     */
+    //% block
+    export function RandomizeDungeonColors(): void
+    {
+        let hue = randint(0, 255);
+        color.setColor(1, color.hsv(hue, 255, 255));
+        color.setColor(2, color.hsv(hue, 224, 192));
+        color.setColor(3, color.hsv(hue, 192, 128));
+    }
+    /**
+     * Format number with given integer digits
+     */
+    //% block
+    export function FormatInteger(value: number, digits: number): string
+    {
+        let s: string = "" + (value | 0);
+        while(s.length < digits){
+            s = "0" + s;
+        }
+        return s;
     }
 }
