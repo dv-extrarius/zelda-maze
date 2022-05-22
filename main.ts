@@ -26,7 +26,7 @@ let hearts_total: number = 28;
 let hearts_current: number = 3;
 let hearts_hud = sprites.create(assets.image`HeartsHud`, SpriteKind.Player);
 
-let zelda = sprites.create(assets.image`ZeldaFront1`, SpriteKind.Player);
+let zelda = sprites.create(assets.image`ZeldaDown1`, SpriteKind.Player);
 
 zelda.setPosition(16 * 5 + (zelda.width / 2), 16 * 4 + (zelda.height / 2));
 emeralds_hud.setPosition(screen.width - emeralds_hud.width / 2, 8 + (emeralds_hud.height / 2));
@@ -37,7 +37,53 @@ room_id = randint(0, maze.width * maze.height - 1);
 custom.SetMazeRoom(maze, room_id);
 controller.moveSprite(zelda, 50, 50);
 
+//Initialize 4 walking animations for Zelda
+let walking: animation.Animation = null;
+
+walking = animation.createAnimation(0, 175);
+walking.addAnimationFrame(assets.image`ZeldaUp1`);
+walking.addAnimationFrame(assets.image`ZeldaUp2`);
+walking.addAnimationFrame(assets.image`ZeldaUp3`);
+walking.addAnimationFrame(assets.image`ZeldaUp2`);
+animation.attachAnimation(zelda, walking);
+
+walking = animation.createAnimation(1, 175);
+walking.addAnimationFrame(assets.image`ZeldaDown1`);
+walking.addAnimationFrame(assets.image`ZeldaDown2`);
+walking.addAnimationFrame(assets.image`ZeldaDown3`);
+walking.addAnimationFrame(assets.image`ZeldaDown2`);
+animation.attachAnimation(zelda, walking);
+
+walking = animation.createAnimation(2, 175);
+walking.addAnimationFrame(assets.image`ZeldaLeft1`);
+walking.addAnimationFrame(assets.image`ZeldaLeft2`);
+animation.attachAnimation(zelda, walking);
+
+walking = animation.createAnimation(3, 175);
+walking.addAnimationFrame(assets.image`ZeldaRight1`);
+walking.addAnimationFrame(assets.image`ZeldaRight2`);
+animation.attachAnimation(zelda, walking);
+
 game.onUpdate(function () {
+    if (controller.up.isPressed()) {
+        animation.setAction(zelda, 0);
+    }
+    else if (controller.down.isPressed()) {
+        animation.setAction(zelda, 1);
+    }
+    else if (controller.left.isPressed()) {
+        animation.setAction(zelda, 2);
+    }
+    else if (controller.right.isPressed()) {
+        animation.setAction(zelda, 3);
+    }
+    else {
+        animation.stopAnimation(animation.AnimationTypes.All, zelda)
+    }
+});
+
+game.onUpdate(function () {
+    //Process Entering Doors
     if (fade_end == null) {
         if (zelda.x < 12) {
             fade_end = game.runtime() + 125;
