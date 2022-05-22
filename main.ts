@@ -14,7 +14,6 @@ let emeralds_hud = sprites.create(assets.image`EmeraldHud`, SpriteKind.Player)
 
 let hearts_total: number = 6
 let hearts_current: number = 3
-
 let hearts_hud = sprites.create(assets.image`HeartsHud`, SpriteKind.Player)
 
 let zelda = sprites.create(assets.image`ZeldaFront1`, SpriteKind.Player)
@@ -83,6 +82,13 @@ game.onPaint(function () {
     for (; hearts < hearts_total; hearts += 2) {
         hearts_hud.image.drawImage(assets.image`HeartEmpty`, hearts / 2 * 8, 0);
     }
+
+    //Pulse "Heart" and "Emerald" colors
+    let angle = (game.runtime() % 2000) / 2000.0 * 360.0;
+    let offset = Math.round(15 * Math.cos(Math.PI * angle / 180));
+
+    color.setColor(4, color.hsv((250 + offset) % 256, 255, 255));
+    color.setColor(5, color.hsv((99 + offset) % 256, 255, 200));
 })
 
 game.onUpdateInterval(100, function () {

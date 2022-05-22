@@ -58,35 +58,35 @@
         "tilemapTile": true,
         "displayName": "DungeonRight"
     },
-    "tile11": {
-        "data": "hwQQABAAAACDODMzMzODOOieM2M2M+mO6J5mZjNj6Y7onjZjZmbpjuieZmZmZumOmIlmZmZmmInonmZmZmbpjuieZmZmZumO6J5mZmZm6Y7onmZmZmbpjpiZZmZmZpmJiIiIiIiIiIiYmZmZmZmZieiZnume6ZmOmJ6e7u7p6Yno7u7u7u7ujg==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "DungeonDoorRight"
-    },
-    "tile9": {
-        "data": "hwQQABAAAADo7u7u7u7ujpienu7u6emJ6Jme6Z7pmY6YmZmZmZmZiYiIiIiIiIiImJlmZmZmmYnonmZmZmbpjuieZmZmZumO6J5mZmZm6Y7onmZmZmbpjpiJZmZmZpiJ6J5mZmZm6Y7onjZjZmbpjuieZmYzY+mO6J4zYzYz6Y6DODMzMzODOA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "DungeonDoorLeft"
-    },
-    "tile13": {
-        "data": "hwQQABAAAACIiIiIiIiIOJ6emO7u6e6O7pmY7u7p7o6emZiZmZiZOe6eaGZmZmYznploZmZmNjPumWhmZmY2M+6eaGZmZjY27p5oZmZmZjbumWhmZmZjM56ZaGZmZmMz7p5oZmZmZjOemZiZmZiZOe6ZmO7u6e6Onp6Y7u7p7o6IiIiIiIiIOA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "DungeonDoorTop"
-    },
-    "tile15": {
-        "data": "hwQQABAAAACDiIiIiIiIiOjunu7uienp6O6e7u6Jme6TmYmZmYmZ6TNmZmZmhunuM2NmZmaGmekzY2ZmZoaZ7mNjZmZmhunuY2ZmZmaG6e4zNmZmZoaZ7jM2ZmZmhpnpM2ZmZmaG6e6TmYmZmYmZ6ejunu7uiZnu6O6e7u6J6emDiIiIiIiIiA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "DungeonDoorBottom"
-    },
     "tile16": {
         "data": "hwQQABAAAADf3d3d3d3djX13d3d3d3eHfXd3d3d3d4d9d3d3d3d3h313d3d3d3eHfXd3d3d3d4d9d3d3d3d3h313d3d3d3eHfXd3d3d3d4d9d3d3d3d3h313d3d3d3eHfXd3d3d3d4d9d3d3d3d3h313d3d3d3eHfXd3d3d3d4eIiIiIiIiIaA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "DungeonFloor"
+    },
+    "tile9": {
+        "data": "hwQQABAAAAAiMiMiIjIjIhExERERMRERETERERExEhEiMyIiIjIiIoiIiIiIiIiImJlmZmZmmYnonmZmZmbpjuieZmZmZumO6J5mZmZm6Y7onmZmZmbpjpiJZmZmZpiJ6J5mZmZm6Y7onjZjZmbpjuieZmYzY+mO6J4zYzYz6Y6DODMzMzODOA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "DungeonDoorLeft"
+    },
+    "tile15": {
+        "data": "hwQQABAAAACDiIiIiIgSIejunu7uiRIh6O6e7u6JEyGTmYmZmYkzMzNmZmZmhhIxM2NmZmaGEiEzY2ZmZoYSIWNjZmZmhhIhY2ZmZmaGEiEzNmZmZoYSITM2ZmZmhhIhM2ZmZmaGMzOTmYmZmYkiMejunu7uiRIh6O6e7u6JEiGDiIiIiIgSIQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "DungeonDoorBottom"
+    },
+    "tile13": {
+        "data": "hwQQABAAAAASIYiIiIiIOBIhmO7u6e6OEiGY7u7p7o4TIpiZmZiZOTMzaGZmZmYzEiFoZmZmNjMSIWhmZmY2MxIhaGZmZjY2EiFoZmZmZjYSIWhmZmZjMxIhaGZmZmMzEyFoZmZmZjMzM5iZmZiZORIxmO7u6e6OEiGY7u7p7o4SIYiIiIiIOA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "DungeonDoorTop"
+    },
+    "tile11": {
+        "data": "hwQQABAAAACDODMzMzODOOieM2M2M+mO6J5mZjNj6Y7onjZjZmbpjuieZmZmZumOmIlmZmZmmInonmZmZmbpjuieZmZmZumO6J5mZmZm6Y7onmZmZmbpjpiZZmZmZpmJiIiIiIiIiIgiIiMiIiIzIhEhExERERMRERETERERExEiMiMiIjIjIg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "DungeonDoorRight"
     },
     "level1": {
         "id": "level1",

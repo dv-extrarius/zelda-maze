@@ -21,15 +21,15 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile6 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile11 = image.ofBuffer(hex``);
+    export const tile16 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile9 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile13 = image.ofBuffer(hex``);
-    //% fixedInstance jres blockIdentity=images._tile
     export const tile15 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
-    export const tile16 = image.ofBuffer(hex``);
+    export const tile13 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile11 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -69,16 +69,16 @@ namespace myTiles {
             case "tile5":return tile5;
             case "DungeonRight":
             case "tile6":return tile6;
-            case "DungeonDoorRight":
-            case "tile11":return tile11;
-            case "DungeonDoorLeft":
-            case "tile9":return tile9;
-            case "DungeonDoorTop":
-            case "tile13":return tile13;
-            case "DungeonDoorBottom":
-            case "tile15":return tile15;
             case "DungeonFloor":
             case "tile16":return tile16;
+            case "DungeonDoorLeft":
+            case "tile9":return tile9;
+            case "DungeonDoorBottom":
+            case "tile15":return tile15;
+            case "DungeonDoorTop":
+            case "tile13":return tile13;
+            case "DungeonDoorRight":
+            case "tile11":return tile11;
         }
         return null;
     })
