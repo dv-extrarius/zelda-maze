@@ -47,44 +47,6 @@ namespace myImages {
 ..........aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ..........aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 `;
-            case "image6":
-            case "ZeldaFront1":return img`
-. . . . . . . 6 6 . . . . . . . 
-. . . . . 6 6 9 9 6 6 . . . . . 
-. . . . 6 c 9 c c 9 c 6 . . . . 
-. . . 6 e 9 c c c c 9 e 6 . . . 
-. . 6 7 8 e 9 9 9 9 e 8 7 6 . . 
-. 6 e 8 8 8 8 8 8 8 8 8 8 e 6 . 
-. 6 8 8 e 7 8 e e 8 7 e 8 8 6 . 
-. 6 7 8 6 6 e e e e 6 6 8 7 6 . 
-6 6 7 7 6 b 6 e e 6 b 6 7 7 6 6 
-6 7 7 7 e f 6 a a 6 f e 7 7 7 6 
-. 6 7 7 e e a a a a a 6 7 7 6 . 
-. . 6 a a a e d d d 7 6 e 6 . . 
-. . 6 e a a e d d d d 8 a e . . 
-. . . 6 e e d d 7 d 7 7 6 e . . 
-. . . 6 6 d d d d d d 6 6 . . . 
-. . . . . 6 6 6 7 7 6 . . . . . 
-`;
-            case "image7":
-            case "ZeldaFront2":return img`
-. . . . . 6 6 9 9 6 6 . . . . . 
-. . . . 6 c 9 c c 9 c 6 . . . . 
-. . . 6 e 9 c c c c 9 e 6 . . . 
-. . 6 7 8 e 9 9 9 9 e 8 7 6 . . 
-. . 6 8 8 8 8 8 8 8 8 8 8 6 . . 
-. 6 8 8 e 7 8 e e 8 7 e 8 8 6 . 
-. 6 8 8 6 6 e e e e 6 6 8 8 6 . 
-. 6 7 7 6 b 6 e e 6 b 6 7 7 6 . 
-. 6 7 7 e f 6 a a 6 f e 7 7 6 . 
-6 6 7 7 6 a a a a a a 6 7 7 6 6 
-6 7 7 6 6 6 e e e e 6 6 6 7 7 6 
-. f e e 6 8 d d d d 8 6 e e 6 . 
-. . e a 8 d d d d d d 8 a e . . 
-. . e 6 7 d 7 d 7 d 7 7 6 e . . 
-. . . 6 6 f d f d f d 6 6 . . . 
-. . . . . 6 6 7 7 6 6 . . . . . 
-`;
             case "image3":
             case "HeartHalf":return img`
 . . . . . . . . 
@@ -95,6 +57,63 @@ namespace myImages {
 . . 4 4 d d d . 
 . . . 4 d d . . 
 . . . . d . . . 
+`;
+            case "image6":
+            case "ZeldaFront1":return img`
+. . . . . . . 6 6 . . . . . . . 
+. . . . . 6 6 9 9 6 6 . . . . . 
+. . . . 6 c 9 c c 9 c 6 . . . . 
+. . . 6 e 9 c c c c 9 e 6 . . . 
+. . 6 8 7 e 9 9 9 9 e 7 8 6 . . 
+. 6 e 7 7 7 7 7 7 7 7 7 7 e 6 . 
+. 6 7 7 e 8 7 e e 7 8 e 7 7 6 . 
+. 6 8 7 6 6 e e e e 6 6 7 8 6 . 
+6 6 8 8 6 b 6 e e 6 b 6 8 8 6 6 
+6 8 8 8 e f 6 a a 6 f e 8 8 8 6 
+. 6 8 8 e e a a a a a 6 8 8 6 . 
+. . 6 a a a e d d d 7 6 e 6 . . 
+. . 6 e a a e d d d d 8 a e . . 
+. . . 6 e e d d 7 d 7 7 6 e . . 
+. . . 6 6 f d f d f f 6 6 . . . 
+. . . . . 6 6 6 7 7 6 . . . . . 
+`;
+            case "image7":
+            case "ZeldaFront2":return img`
+. . . . . 6 6 9 9 6 6 . . . . . 
+. . . . 6 c 9 c c 9 c 6 . . . . 
+. . . 6 e 9 c c c c 9 e 6 . . . 
+. . 6 8 7 e 9 9 9 9 e 7 8 6 . . 
+. . 6 7 7 7 7 7 7 7 7 7 7 6 . . 
+. 6 7 7 e 8 7 e e 7 8 e 7 7 6 . 
+. 6 7 7 6 6 e e e e 6 6 7 7 6 . 
+. 6 8 8 6 b 6 e e 6 b 6 8 8 6 . 
+. 6 8 8 e f 6 a a 6 f e 8 8 6 . 
+6 6 8 8 6 a a a a a a 6 8 8 6 6 
+6 8 8 6 6 6 e e e e 6 6 6 8 8 6 
+. f e e 6 8 d d d d 8 6 e e 6 . 
+. . e a 8 d d d d d d 8 a e . . 
+. . e 6 7 d 7 d 7 d 7 7 6 e . . 
+. . . 6 6 f d f d f d 6 6 . . . 
+. . . . . 6 6 7 7 6 6 . . . . . 
+`;
+            case "image8":
+            case "ZeldaFront3":return img`
+. . . . . . . 6 6 . . . . . . . 
+. . . . . 6 6 9 9 6 6 . . . . . 
+. . . . 6 c 9 c c 9 c 6 . . . . 
+. . . 6 e 9 c c c c 9 e 6 . . . 
+. . 6 8 7 e 9 9 9 9 e 7 8 6 . . 
+. 6 e 7 7 7 7 7 7 7 7 7 7 e 6 . 
+. 6 7 7 e 8 7 e e 7 8 e 7 7 6 . 
+. 6 8 7 6 6 e e e e 6 6 7 8 6 . 
+6 6 8 8 6 b 6 e e 6 b 6 8 8 6 6 
+6 8 8 8 e f 6 a a 6 f e 8 8 8 6 
+. 6 8 8 6 a a a a a e e 8 8 6 . 
+. . 6 e 6 7 d d d e a a a 6 . . 
+. . e a 8 d d d d e a a e 6 . . 
+. . e 6 7 7 d 7 d d e e 6 . . . 
+. . . 6 6 f f d f d f 6 6 . . . 
+. . . . . 6 7 7 6 6 6 . . . . . 
 `;
         }
         return null;

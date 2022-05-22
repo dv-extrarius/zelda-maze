@@ -19,20 +19,25 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "EmeraldHud"
     },
-    "image6": {
-        "data": "hwQQABAAAAAAAAAAZgAAAAAAYGZ2BgAAAADmeHdnBgAAYIeId6duBgDmiG7mruoGYJyOZ/uu6m1gyYnoZurebZbMie6u2t1tlsyJ7q7afX1gyYnoZtrdfWCcjmf7en1tAOaIbuZmeAYAYIeId+dqBgAA5nh3Z+4AAABgZnYGAAAAAAAAZgAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "ZeldaFront1"
-    },
-    "image7": {
-        "data": "hwQQABAAAAAAAAAAYAYAAAAAYGZm9wAAAGCGeHfn7gAAdoh4d+ZqBmCO6GZuZngGxul4tq+G3W+WnIhupt59bcmc6O6q3t1/yZzo7qrefX2WnIhupt7db8bpeLavhn1tYI7oZm5meAYAdoh4d+ZqBgBghnh35+4AAABgZmZnAAAAAAAAYAYAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "displayName": "ZeldaFront2"
-    },
     "image3": {
         "data": "hwQIAAgAAAAAAAAAAEQEAEBERABAREQEAETd3dDd3Q3Q3d0AAN0NAA==",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "HeartHalf"
+    },
+    "image6": {
+        "data": "hwQQABAAAAAAAAAAZgAAAAAAYGaGBgAAAADmh4hoBgAAYHh3iKhuBgDmd27mruoGYJx+aPuu6m9gyXnnZurebZbMee6u2t1vlsx57q7afX1gyXnnZtrdf2Ccfmj7en1vAOZ3buZmeAYAYHh3iOhqBgAA5oeIaO4AAABgZoYGAAAAAAAAZgAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "ZeldaFront1"
+    },
+    "image7": {
+        "data": "hwQQABAAAAAAAAAAYAYAAAAAYGZm+AAAAGB2h4jo7gAAhneHiOZqBmB+52ZuZngGxumHtq+G3W+WnHdupt59bcmc5+6q3t1/yZzn7qrefX2WnHdupt7db8bph7avhn1tYH7nZm5meAYAhneHiOZqBgBgdoeI6O4AAABgZmZoAAAAAAAAYAYAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "ZeldaFront2"
+    },
+    "image8": {
+        "data": "hwQQABAAAAAAAAAAZgAAAAAAYGaGBgAAAADmh4ho7gAAYHh3iOhqBgDmd27mZngGYJx+aPt6fW9gyXnnZtrdf5bMee6u2n19lsx57q7a3W9gyXnnZurebWCcfmj7rupvAOZ3buau6gYAYHh3iKhuBgAA5oeIaAYAAABgZoYGAAAAAAAAZgAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "ZeldaFront3"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",

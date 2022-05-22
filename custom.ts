@@ -203,9 +203,9 @@ namespace custom {
     export function RandomizeDungeonColors(): void
     {
         let hue = randint(0, 255);
-        color.setColor(1, color.hsv(hue, 255, 255));
-        color.setColor(2, color.hsv(hue, 224, 192));
-        color.setColor(3, color.hsv(hue, 192, 128));
+        color.setColor(1, color.hsv(hue, 250, 255));
+        color.setColor(2, color.hsv(hue, 235, 192));
+        color.setColor(3, color.hsv(hue, 220, 128));
     }
     /**
      * Format number with given integer digits
