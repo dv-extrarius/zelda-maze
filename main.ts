@@ -28,53 +28,56 @@ let hearts_hud = sprites.create(assets.image`HeartsHud`, SpriteKind.Player);
 
 let zelda = sprites.create(assets.image`ZeldaDown1`, SpriteKind.Player);
 
-zelda.setPosition(16 * 5 + (zelda.width / 2), 16 * 4 + (zelda.height / 2));
+//Position Emerald & Heart HUD
 emeralds_hud.setPosition(screen.width - emeralds_hud.width / 2, 8 + (emeralds_hud.height / 2));
 hearts_hud.setPosition(hearts_hud.width / 2, 8 + (hearts_hud.height / 2));
 
+//Generate maze & initialize
 let maze = custom.GenerateMaze(8, 8);
 room_id = randint(0, maze.width * maze.height - 1);
 custom.SetMazeRoom(maze, room_id);
+zelda.setPosition(16 * 5 + (zelda.width / 2), 16 * 4 + (zelda.height / 2));
 controller.moveSprite(zelda, 50, 50);
+color.clearFadeEffect();
 
 //Initialize 4 walking animations for Zelda
 let walking: animation.Animation = null;
 
 walking = animation.createAnimation(0, 175);
+walking.addAnimationFrame(assets.image`ZeldaLeft1`);
+walking.addAnimationFrame(assets.image`ZeldaLeft2`);
+animation.attachAnimation(zelda, walking);
+
+walking = animation.createAnimation(1, 175);
+walking.addAnimationFrame(assets.image`ZeldaRight1`);
+walking.addAnimationFrame(assets.image`ZeldaRight2`);
+animation.attachAnimation(zelda, walking);
+
+walking = animation.createAnimation(2, 175);
 walking.addAnimationFrame(assets.image`ZeldaUp1`);
 walking.addAnimationFrame(assets.image`ZeldaUp2`);
 walking.addAnimationFrame(assets.image`ZeldaUp3`);
 walking.addAnimationFrame(assets.image`ZeldaUp2`);
 animation.attachAnimation(zelda, walking);
 
-walking = animation.createAnimation(1, 175);
+walking = animation.createAnimation(3, 175);
 walking.addAnimationFrame(assets.image`ZeldaDown1`);
 walking.addAnimationFrame(assets.image`ZeldaDown2`);
 walking.addAnimationFrame(assets.image`ZeldaDown3`);
 walking.addAnimationFrame(assets.image`ZeldaDown2`);
 animation.attachAnimation(zelda, walking);
 
-walking = animation.createAnimation(2, 175);
-walking.addAnimationFrame(assets.image`ZeldaLeft1`);
-walking.addAnimationFrame(assets.image`ZeldaLeft2`);
-animation.attachAnimation(zelda, walking);
-
-walking = animation.createAnimation(3, 175);
-walking.addAnimationFrame(assets.image`ZeldaRight1`);
-walking.addAnimationFrame(assets.image`ZeldaRight2`);
-animation.attachAnimation(zelda, walking);
-
 game.onUpdate(function () {
-    if (controller.up.isPressed()) {
+    if (controller.left.isPressed()) {
         animation.setAction(zelda, 0);
     }
-    else if (controller.down.isPressed()) {
+    else if (controller.right.isPressed()) {
         animation.setAction(zelda, 1);
     }
-    else if (controller.left.isPressed()) {
+    else if (controller.up.isPressed()) {
         animation.setAction(zelda, 2);
     }
-    else if (controller.right.isPressed()) {
+    else if (controller.down.isPressed()) {
         animation.setAction(zelda, 3);
     }
     else {
