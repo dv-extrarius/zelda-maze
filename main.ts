@@ -1,39 +1,28 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    //console.logValue("room", room_id)
-    //console.log(console.inspect(maze.walls, 1024))
-    //console.logValue("y", zelda.y)
     custom.RandomizeDungeonColors();
+    hearts_current = randint(0, hearts_total);
 })
-let zelda_alignment = 0
-let pressed_leftright = false
-let pressed_updown = false
-let room_id = 0
-let temp_diff = 0
+
 let fade_end: number = null
 let fade_x: number = 0
 let fade_y: number = 0
-let zelda = sprites.create(img`
-    . . . . . . 5 . 5 . . . . . . .
-    . . . . . f 5 5 5 f f . . . . .
-    . . . . f 1 5 2 5 1 6 f . . . .
-    . . . f 1 6 6 6 6 6 1 6 f . . .
-    . . . f 6 6 f f f f 6 1 f . . .
-    . . . f 6 f f d d f f 6 f . . .
-    . . f 6 f d f d d f d f 6 f . .
-    . . f 6 f d 3 d d 3 d f 6 f . .
-    . . f 6 6 f d d d d f 6 6 f . .
-    . f 6 6 f 3 f f f f 3 f 6 6 f .
-    . . f f d 3 5 3 3 5 3 d f f . .
-    . . f d d f 3 5 5 3 f d d f . .
-    . . . f f 3 3 3 3 3 3 f f . . .
-    . . . f 3 3 5 3 3 5 3 3 f . . .
-    . . . f f f f f f f f f f . . .
-    . . . . . f f . . f f . . . . .
-`, SpriteKind.Player)
-let emeralds_hud = sprites.create(assets.image`Emerald_Hud`, SpriteKind.Player)
 
-zelda.setPosition(screen.width / 2, screen.height / 2)
+let room_id = 0
+
+let emeralds: number = 0
+let emeralds_hud = sprites.create(assets.image`EmeraldHud`, SpriteKind.Player)
+
+let hearts_total: number = 6
+let hearts_current: number = 3
+
+let hearts_hud = sprites.create(assets.image`HeartsHud`, SpriteKind.Player)
+
+let zelda = sprites.create(assets.image`ZeldaFront1`, SpriteKind.Player)
+
+zelda.setPosition(16 * 5 + (zelda.width / 2), 16*4 + (zelda.height / 2))
 emeralds_hud.setPosition(screen.width - emeralds_hud.width / 2, 8 + (emeralds_hud.height / 2));
+hearts_hud.setPosition(hearts_hud.width / 2, 8 + (hearts_hud.height / 2));
+
 controller.moveSprite(zelda, 50, 50)
 let maze = custom.GenerateMaze(8, 8)
 room_id = randint(0, maze.width * maze.height - 1)
@@ -76,15 +65,32 @@ game.onUpdate(function () {
         fade_end = null;
         controller.moveSprite(zelda, 50, 50)
     }
+})
+
+game.onPaint(function () {
     emeralds_hud.image.fillRect(10, 0, emeralds_hud.width - 10, emeralds_hud.height, 0);
     emeralds_hud.image.print(custom.FormatInteger(room_id, 5), 11, 0, 5, image.font8);
+
+    hearts_hud.image.fill(0);
+    let hearts = 0
+    for (hearts = 0; hearts + 2 <= hearts_current; hearts += 2) {
+        hearts_hud.image.drawImage(assets.image`HeartFull`, hearts / 2 * 8, 0);
+    }
+    if (hearts_current % 2 == 1) {
+        hearts_hud.image.drawImage(assets.image`HeartHalf`, hearts / 2 * 8, 0);
+        hearts += 2;
+    }
+    for (; hearts < hearts_total; hearts += 2) {
+        hearts_hud.image.drawImage(assets.image`HeartEmpty`, hearts / 2 * 8, 0);
+    }
 })
+
 game.onUpdateInterval(100, function () {
     // Nudge Link to align on the grid when moving in a cardinal direction
-    pressed_updown = controller.up.isPressed() || controller.down.isPressed()
-    pressed_leftright = controller.right.isPressed() || controller.left.isPressed()
+    const pressed_updown = controller.up.isPressed() || controller.down.isPressed()
+    const pressed_leftright = controller.right.isPressed() || controller.left.isPressed()
     if (pressed_updown && !(pressed_leftright)) {
-        zelda_alignment = (zelda.x - 8) % 16
+        const zelda_alignment = (zelda.x - 8) % 16
         if (zelda_alignment > 0 && zelda_alignment < 8) {
             zelda.x += -1
         } else if (zelda_alignment >= 8) {
@@ -92,7 +98,7 @@ game.onUpdateInterval(100, function () {
         }
         zelda.x = Math.round(zelda.x)
     } else if (pressed_leftright && !(pressed_updown)) {
-        zelda_alignment = (zelda.y - 8) % 16
+        const zelda_alignment = (zelda.y - 8) % 16
         if (zelda_alignment > 0 && zelda_alignment < 8) {
             zelda.y += -1
         } else if (zelda_alignment >= 8) {

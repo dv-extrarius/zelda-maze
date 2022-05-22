@@ -1,8 +1,38 @@
 {
+    "image2": {
+        "data": "hwQIAAgAAAAAAAAAAEQEAEBERABAREQEAEREREBERARAREQAAEQEAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HeartFull"
+    },
+    "image4": {
+        "data": "hwQIAAgAAAAAAAAAAN0NANDd3QDQ3d0NAN3d3dDd3Q3Q3d0AAN0NAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HeartEmpty"
+    },
+    "image5": {
+        "data": "hwRwAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HeartsHud"
+    },
     "image1": {
         "data": "hwQpAAgAAAAAAAAAAFAAAABVBQBQVVUAUFVVAFBVVQBQVVUAAFUFAABQAAAAAAAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqg==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "Emerald_Hud"
+        "displayName": "EmeraldHud"
+    },
+    "image6": {
+        "data": "hwQQABAAAAAAAAAAZgAAAAAAYGZ2BgAAAADmeHdnBgAAYIeId6duBgDmiG7mruoGYJyOZ/uu6m1gyYnoZurebZbMie6u2t1tlsyJ7q7afX1gyYnoZtrdfWCcjmf7en1tAOaIbuZmeAYAYIeId+dqBgAA5nh3Z+4AAABgZnYGAAAAAAAAZgAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "ZeldaFront1"
+    },
+    "image7": {
+        "data": "hwQQABAAAAAAAAAAYAYAAAAAYGZm9wAAAGCGeHfn7gAAdoh4d+ZqBmCO6GZuZngGxul4tq+G3W+WnIhupt59bcmc6O6q3t1/yZzo7qrefX2WnIhupt7db8bpeLavhn1tYI7oZm5meAYAdoh4d+ZqBgBghnh35+4AAABgZmZnAAAAAAAAYAYAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "ZeldaFront2"
+    },
+    "image3": {
+        "data": "hwQIAAgAAAAAAAAAAEQEAEBERABAREQEAETd3dDd3Q3Q3d0AAN0NAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "HeartHalf"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
