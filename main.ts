@@ -154,23 +154,23 @@ game.onUpdate(function () {
 
 game.onUpdateInterval(100, function () {
     // Nudge Link to align on the grid when moving in a cardinal direction
-    const pressed_updown = controller.up.isPressed() || controller.down.isPressed()
-    const pressed_leftright = controller.right.isPressed() || controller.left.isPressed()
-    if (pressed_updown && !(pressed_leftright)) {
-        const zelda_alignment = (zelda.x - 8) % 16
+    const pressed_updown = controller.up.isPressed() || controller.down.isPressed();
+    const pressed_leftright = controller.right.isPressed() || controller.left.isPressed();
+    if (pressed_updown && !pressed_leftright) {
+        const zelda_alignment = (zelda.x - 8) % 16;
         if (zelda_alignment > 0 && zelda_alignment < 8) {
-            zelda.x += -1
+            zelda.x += -1;
         } else if (zelda_alignment >= 8) {
-            zelda.x += 1
+            zelda.x += 1;
         }
         zelda.x = Math.round(zelda.x)
-    } else if (pressed_leftright && !(pressed_updown)) {
-        const zelda_alignment = (zelda.y - 8) % 16
+    } else if (pressed_leftright && !pressed_updown) {
+        const zelda_alignment = (zelda.y - 8) % 16;
         if (zelda_alignment > 0 && zelda_alignment < 8) {
-            zelda.y += -1
+            zelda.y += -1;
         } else if (zelda_alignment >= 8) {
-            zelda.y += 1
+            zelda.y += 1;
         }
-        zelda.y = Math.round(zelda.y)
+        zelda.y = Math.round(zelda.y);
     }
 })
